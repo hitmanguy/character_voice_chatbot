@@ -139,8 +139,12 @@ A) Backend API (FastAPI)
 
 ```powershell
 conda activate ai-env
+<<<<<<< HEAD
 cd character
 python -m uvicorn server:app --reload --host 127.0.0.1 --port 8000
+=======
+python -m uvicorn character.server:app --reload --host 127.0.0.1 --port 8000
+>>>>>>> 62acd1e3edf719fd1f9d5ad9ad084b37416ce203
 ```
 
 You should see “Application startup complete.”  
