@@ -1,0 +1,57 @@
+# ===============================================
+# Core AI/ML & Deep Learning Frameworks
+# ===============================================
+# PyTorch is the main deep learning library
+torch
+# Hugging Face ecosystem for models, tokenizers, and training
+transformers
+datasets
+accelerate
+# For 4-bit quantization (QLoRA)
+bitsandbytes
+# For applying LoRA adapters (PEFT)
+peft
+# For the fine-tuning script
+trl
+safetensors
+
+# ===============================================
+# Speech-to-Text (STT)
+# ===============================================
+# OpenAI's Whisper model for transcription
+# Note: This installs directly from the GitHub repository
+git+https://github.com/openai/whisper.git
+
+# ===============================================
+# Text-to-Speech (TTS)
+# ===============================================
+# Coqui's library for high-fidelity voice cloning (XTTSv2)
+TTS
+# A dependency often needed by TTS for certain audio operations
+soundfile
+
+# ===============================================
+# API Clients for LLM Services
+# ===============================================
+# Google's official library for the Gemini API
+google-generativeai
+
+# ===============================================
+# Audio Processing & Utilities
+# ===============================================
+# Used for creating the test audio file in main.py
+gTTS
+pydub
+
+# ===============================================
+# Optional: Data Preparation & Interactive Use
+# ===============================================
+# These are required if you run the data generation/preparation scripts.
+# pandas
+# ftfy
+# requests
+# beautifulsoup4
+# tqdm
+
+# Used by the play_audio function in main.py for interactive sessions (like Jupyter/Colab)
+# IPython
