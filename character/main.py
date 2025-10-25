@@ -108,8 +108,8 @@ if __name__ == '__main__':
 
     print("\n--- Creating a Hindi test audio input file ('test_input_hindi.wav')... ---")
     try:
-        hindi_text = "स्टार्क, वास्तव में हल्क कौन है?"
-        tts = gTTS(hindi_text, lang='hi')
+        kn_text = "ನಮಸ್ಕಾರ ಟೋನಿ ಸ್ಟಾರ್ಕ್, ಇಂದು ನಿಮ್ಮ ಯೋಜನೆ ಏನು?"
+        tts = gTTS(kn_text, lang='kn')
         tts.save("test_input_hindi.mp3")
         AudioSegment.from_mp3("test_input_hindi.mp3").export("test_input_hindi.wav", format="wav")
         os.remove("test_input_hindi.mp3")

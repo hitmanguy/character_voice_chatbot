@@ -8,7 +8,7 @@ import type { Message, Theme, VoiceState } from "./types";
 const initialMessages: Message[] = [
   {
     id: 1,
-    text: "Hello! I am Iron Man. Tap the microphone to start our conversation.",
+    text: "Hello! Tap the microphone to start talking.",
     timestamp: "10:30 AM",
     sender: "bot",
   },
@@ -97,14 +97,18 @@ export default function App() {
             ]);
             setIsTyping(false);
 
-            // Play synthesized audio
-            setIsBotSpeaking(true);
-            const audio = new Audio(outputUrl);
-            audio.onended = () => {
-              setIsBotSpeaking(false);
+            // Play synthesized audio (only if present)
+            if (outputUrl) {
+              setIsBotSpeaking(true);
+              const audio = new Audio(outputUrl);
+              audio.onended = () => {
+                setIsBotSpeaking(false);
+                setVoiceState("idle");
+              };
+              await audio.play();
+            } else {
               setVoiceState("idle");
-            };
-            await audio.play();
+            }
           } catch (err) {
             console.error(err);
             setIsTyping(false);
@@ -151,14 +155,45 @@ export default function App() {
   return (
     <main
       className={`w-full min-h-screen font-sans transition-colors duration-300 ${
-        theme === "light" ? "bg-gray-100" : "bg-gray-900"
+        theme === "light" ? "bg-zinc-50" : "bg-slate-950"
       }`}
     >
-      <div className="fixed inset-0 -z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-purple-100 dark:from-gray-800 dark:via-gray-900 dark:to-indigo-900 animate-[gradient_15s_ease_infinite] bg-[length:200%_200%]"></div>
+      {/* Neutral animated background */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        {/* Soft gradient wash */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-200 via-white to-zinc-200 dark:from-slate-900 dark:via-slate-950 dark:to-zinc-900 animate-[gradient_18s_ease_in_out_infinite] bg-[length:200%_200%]" />
+        {/* Subtle grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+            backgroundSize: "44px 44px",
+          }}
+        />
+        {/* Vignette */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.45) 95%)",
+          }}
+        />
       </div>
-      <div className="flex items-center justify-center min-h-screen p-2 sm:p-4">
-        <div className="relative w-full max-w-4xl h-[95vh] max-h-[900px] bg-white/30 dark:bg-black/30 backdrop-blur-2xl rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-white/20">
+
+      <div className="flex items-center justify-center min-h-screen p-3 sm:p-6">
+        <div
+          className="
+            relative w-full max-w-4xl h-[92vh] max-h-[900px]
+            rounded-3xl overflow-hidden
+            border border-black/5 dark:border-white/10
+            backdrop-blur-2xl
+            shadow-[0_40px_90px_-20px_rgba(0,0,0,0.55)]
+            bg-white/60 dark:bg-neutral-900/40
+          "
+        >
+          {/* Subtle inner ring */}
+          <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5 dark:ring-white/10" />
           <Header theme={theme} toggleTheme={toggleTheme} />
           <MessageList
             messages={messages}

@@ -1,15 +1,14 @@
 import os
 import uuid
 import logging
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydub import AudioSegment
 
 from config import Config
-from main import SpeechToSpeechPipeline  # re-use your pipeline
+from main import SpeechToSpeechPipeline
 
-# Folders
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR = os.path.join(BASE_DIR, "inputs")
 OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
@@ -18,26 +17,23 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 app = FastAPI(title="S2S Pipeline API")
 
-# Allow dev origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for local dev; restrict as needed
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Static serving for generated audio files
 app.mount("/outputs", StaticFiles(directory=OUTPUT_DIR), name="outputs")
 
-# Init pipeline once
 config = Config()
 pipeline = SpeechToSpeechPipeline(config)
 
 @app.post("/s2s")
 async def s2s(file: UploadFile = File(...)):
     try:
-        # Save uploaded to temp
+        # Save uploaded
         in_ext = os.path.splitext(file.filename or "")[1].lower() or ".webm"
         temp_input_path = os.path.join(INPUT_DIR, f"upload_{uuid.uuid4().hex}{in_ext}")
         with open(temp_input_path, "wb") as f:
@@ -46,32 +42,30 @@ async def s2s(file: UploadFile = File(...)):
         # Convert to wav
         input_wav_path = os.path.join(INPUT_DIR, f"in_{uuid.uuid4().hex}.wav")
         AudioSegment.from_file(temp_input_path).export(input_wav_path, format="wav")
-        try:
-            os.remove(temp_input_path)
-        except Exception:
-            pass
+        try: os.remove(temp_input_path)
+        except Exception: pass
 
         # Output file path
         out_name = f"out_{uuid.uuid4().hex}.wav"
         output_wav_path = os.path.join(OUTPUT_DIR, out_name)
 
-        # Call your pipeline (returns dict with audio_path/text/input_text)
+        # Run pipeline
         result = pipeline.run(input_wav_path, output_wav_path)
-
         if not isinstance(result, dict):
-            raise HTTPException(status_code=500, detail="Unexpected pipeline result.")
+            return {"ok": False, "error": "Unexpected pipeline result.", "output_url": None, "text": "", "input_text": ""}
 
         audio_path = result.get("audio_path") or ""
         text = result.get("text") or ""
         input_text = result.get("input_text") or ""
 
-        if not audio_path or not os.path.exists(audio_path):
-            raise HTTPException(status_code=500, detail="Pipeline failed to generate audio.")
+        output_url = None
+        if audio_path and os.path.exists(audio_path):
+            output_url = f"/outputs/{os.path.basename(audio_path)}"
 
-        out_basename = os.path.basename(audio_path)
-        return {"output_url": f"/outputs/{out_basename}", "text": text, "input_text": input_text}
-    except HTTPException:
-        raise
+        # Partial success supported: return text even if audio is missing
+        ok = bool(text or output_url)
+        return {"ok": ok, "output_url": output_url, "text": text, "input_text": input_text, "error": "" if ok else "Pipeline produced no output."}
+
     except Exception as e:
         logging.exception("S2S processing failed")
-        raise HTTPException(status_code=500, detail=str(e))
+        return {"ok": False, "error": str(e), "output_url": None, "text": "", "input_text": ""}
