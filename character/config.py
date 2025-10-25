@@ -19,6 +19,10 @@ class Config:
     # --- Text-to-Speech Model (Coqui XTTSv2) ---
     tts_model_id: str = "tts_models/multilingual/multi-dataset/xtts_v2"
     tts_speaker_wav: str = "weapon.wav"
+
+        # --- Supporting Analysis Models ---
+    emotion_model_name: str = "j-hartmann/emotion-english-distilroberta-base"
+
     
     # --- Translation Model (NLLB) ---
     translation_model_id: str = "facebook/nllb-200-distilled-600M"

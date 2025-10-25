@@ -15,7 +15,6 @@ load_dotenv()
 # --- Initialize the Gemini Client ---
 try:
     # 1. Get the API key from environment variables for security
-    #os.environ["GOOGLE_API_KEY"] = "AIzaSyDlEVZAra1qsUT6RyT8DWko2O1d5TW8Wns"
     api_key = os.environ["GOOGLE_API_KEY"]
     genai.configure(api_key=api_key)
 
