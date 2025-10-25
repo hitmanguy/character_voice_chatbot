@@ -23,6 +23,73 @@ dist-ssr
 *.sln
 *.sw?
 
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Audio/Media files (inputs and outputs)
+character/inputs/
+character/outputs/
+*.wav
+*.mp3
+*.webm
+*.ogg
+*.flac
+*.m4a
+
+# Model cache and checkpoints
+.cache/
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Test files
+test_*.wav
+test_*.mp3
+real_*.wav
+final_*.wav
