@@ -1,4 +1,4 @@
-# Iron Man Character Voice Chatbot
+<img width="1196" height="777" alt="image" src="https://github.com/user-attachments/assets/4bd490bd-15da-49a0-afef-5e3a32f5d3fe" /># Iron Man Character Voice Chatbot
 
 Talk to Iron Man (Tony Stark) with your voice. The app records your speech in the browser, sends it to a Python backend that:
 
@@ -24,6 +24,8 @@ Frontend shows your transcribed input, Iron Man’s reply text, and plays the re
 - Local-first: run entirely on your machine (gTTS fallback requires internet)
 
 ---
+<img width="1196" height="777" alt="image" src="https://github.com/user-attachments/assets/c9fa3ce3-7e9d-4318-b01b-6b619ab43d82" />
+
 
 ## Architecture
 
@@ -61,12 +63,12 @@ Models (downloaded automatically on first run):
 
 - Whisper (base)
 - NLLB 200 distilled 600M
-- Character LLM: Hitmanguy/pythia-2.8b-ironman_v2
+- Character LLM: Hitmanguy/tinyllama-ironman_vfinal
 - Coqui XTTSv2: tts_models/multilingual/multi-dataset/xtts_v2
 
 Audio assets:
 
-- A speaker reference WAV at character/config.py -> tts_speaker_wav (default: weapon.wav). Place your WAV file at the repo root or adjust the path.
+- A speaker reference WAV at character/config.py -> tts_speaker_wav (default: tony.wav). Place your WAV file at the repo root or adjust the path.
 
 ---
 
