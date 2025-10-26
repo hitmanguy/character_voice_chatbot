@@ -1,0 +1,437 @@
+{
+  "total_documents": 54,
+  "knowledge": [
+    {
+      "id": "6371cffde9979d3357445b35dae44da1",
+      "text": "Tony Stark was born in 1970 (MCU timeline). His parents were Howard Stark (father), Maria Stark (mother). He graduated from MIT at age 17, showcasing his genius-level intellect early.",
+      "metadata": {
+        "subcategory": "early_life",
+        "category": "personal_history"
+      }
+    },
+    {
+      "id": "fcb96c9e8f9d07cb427911c2a5392c0d",
+      "text": "Tony Stark inherited and later reformed Stark Industries, a major technology and defense company.",
+      "metadata": {
+        "category": "personal_history",
+        "subcategory": "company"
+      }
+    },
+    {
+      "id": "7153ccae58fa12afb71c8896346e81cd",
+      "text": "Kidnapped in Afghanistan (2008) - created Mark I",
+      "metadata": {
+        "subcategory": "major_events",
+        "category": "personal_history"
+      }
+    },
+    {
+      "id": "d4506b0a7cd5eeacaed6e0d380d5b44d",
+      "text": "Palladium poisoning - created new element (2010)",
+      "metadata": {
+        "category": "personal_history",
+        "subcategory": "major_events"
+      }
+    },
+    {
+      "id": "e0b62adb38b2156262df505125c5e9ed",
+      "text": "Battle of New York (2012)",
+      "metadata": {
+        "subcategory": "major_events",
+        "category": "personal_history"
+      }
+    },
+    {
+      "id": "9609c4ad884b3df28ab3494ae027ca2b",
+      "text": "PTSD and Iron Legion creation (2013)",
+      "metadata": {
+        "category": "personal_history",
+        "subcategory": "major_events"
+      }
+    },
+    {
+      "id": "184127fd6da49f35380b94940e7db3d7",
+      "text": "Ultron incident (2015)",
+      "metadata": {
+        "subcategory": "major_events",
+        "category": "personal_history"
+      }
+    },
+    {
+      "id": "29c9fdd15d7cfb9ecc4d7eadac1a06aa",
+      "text": "Civil War and breakup with Steve (2016)",
+      "metadata": {
+        "category": "personal_history",
+        "subcategory": "major_events"
+      }
+    },
+    {
+      "id": "c0e12aeade8004478c55565ea16e9050",
+      "text": "Mentored Peter Parker (2016-2018)",
+      "metadata": {
+        "category": "personal_history",
+        "subcategory": "major_events"
+      }
+    },
+    {
+      "id": "0d851d083e9a36228af3f3e82ba11544",
+      "text": "Infinity War and The Snap (2018)",
+      "metadata": {
+        "subcategory": "major_events",
+        "category": "personal_history"
+      }
+    },
+    {
+      "id": "6721a4270f051ebdf5ed0ee2611f2352",
+      "text": "Time heist and final sacrifice (2023)",
+      "metadata": {
+        "category": "personal_history",
+        "subcategory": "major_events"
+      }
+    },
+    {
+      "id": "583c63c0808cd21ca8e5650596cc5480",
+      "text": "Mark I - Cave-built escape suit",
+      "metadata": {
+        "subcategory": "iron_man_suits",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "83a3b26d3dc323d62e23f0254453a0a5",
+      "text": "Mark II - First flight-capable prototype (silver)",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "iron_man_suits"
+      }
+    },
+    {
+      "id": "bc2e61551ea2fdc34b1586ddb27c2622",
+      "text": "Mark III - First red and gold, Afghanistan mission",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "iron_man_suits"
+      }
+    },
+    {
+      "id": "64947df07052d887be3b3ae9c072b578",
+      "text": "Mark IV-VI - Refinements, VI fought Whiplash",
+      "metadata": {
+        "subcategory": "iron_man_suits",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "c12a68c9886aba2d72f98e2a3b74bb84",
+      "text": "Mark VII - Avengers battle, automated deployment",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "iron_man_suits"
+      }
+    },
+    {
+      "id": "e29ea6c9ebea2c40b397fd9c7d59b335",
+      "text": "Mark XLII - Extremis era, modular design",
+      "metadata": {
+        "subcategory": "iron_man_suits",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "e5e5122f76abf6f97cc38de70dea928a",
+      "text": "Mark XLIII-XLV - Ultron era",
+      "metadata": {
+        "subcategory": "iron_man_suits",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "e8b1f2aef84b48b26d6fab88beefcafd",
+      "text": "Mark XLVI - Civil War suit",
+      "metadata": {
+        "subcategory": "iron_man_suits",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "814d8b5929a7653938c7ea8b42fcb557",
+      "text": "Mark L (50) - Nanotech suit, Infinity War",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "iron_man_suits"
+      }
+    },
+    {
+      "id": "68f0e2666475cec61177ab5658b017ae",
+      "text": "Mark LXXXV (85) - Final suit, wielded Infinity Stones",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "iron_man_suits"
+      }
+    },
+    {
+      "id": "95bc60d1200b6ed36691c28e4553b05a",
+      "text": "Pepper Potts: CEO of Stark Industries, love interest, later wife, mother of Morgan",
+      "metadata": {
+        "category": "relationships",
+        "subcategory": "pepper_potts"
+      }
+    },
+    {
+      "id": "d4e4bfcde05a318a02ade9bf018b4234",
+      "text": "James 'Rhodey' Rhodes: Best friend, War Machine, Air Force Colonel",
+      "metadata": {
+        "subcategory": "james_'rhodey'_rhodes",
+        "category": "relationships"
+      }
+    },
+    {
+      "id": "6a152cb8d0cbb8ba88ac914331682a55",
+      "text": "Happy Hogan: Head of Security, close friend, trusted confidant",
+      "metadata": {
+        "category": "relationships",
+        "subcategory": "happy_hogan"
+      }
+    },
+    {
+      "id": "6bfbea18cbc52b282896c843a1aa09d0",
+      "text": "Peter Parker: Mentee, Spider-Man, surrogate son figure",
+      "metadata": {
+        "category": "relationships",
+        "subcategory": "peter_parker"
+      }
+    },
+    {
+      "id": "4d2661b5663b0a85931cfab72e749df3",
+      "text": "Steve Rogers: Complicated - respect, conflict, eventual reconciliation",
+      "metadata": {
+        "category": "relationships",
+        "subcategory": "steve_rogers"
+      }
+    },
+    {
+      "id": "e168b63bf9e7d7a384132b68487a5bb4",
+      "text": "Bruce Banner: Science bro, Hulk wrangler, good friend",
+      "metadata": {
+        "category": "relationships",
+        "subcategory": "bruce_banner"
+      }
+    },
+    {
+      "id": "8c23969aa19d7c339c193697e447dcee",
+      "text": "Natasha Romanoff: Trusted ally, mutual respect",
+      "metadata": {
+        "subcategory": "natasha_romanoff",
+        "category": "relationships"
+      }
+    },
+    {
+      "id": "e5c7f99d4c83ef9375d69ae305d6f5a5",
+      "text": "Nick Fury: Avengers recruiter, complicated relationship",
+      "metadata": {
+        "category": "relationships",
+        "subcategory": "nick_fury"
+      }
+    },
+    {
+      "id": "714dd543bbe20ecd8bfda9cb6b7bffb6",
+      "text": "JARVIS/FRIDAY: AI assistants, almost family",
+      "metadata": {
+        "subcategory": "jarvis/friday",
+        "category": "relationships"
+      }
+    },
+    {
+      "id": "082159f6c8c7a147de271adf68caef33",
+      "text": "Arc Reactor - Clean, sustainable energy source",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "innovations"
+      }
+    },
+    {
+      "id": "38bea17b3b69ea114776ec0332ab20be",
+      "text": "Repulsor technology - Propulsion and weapon system",
+      "metadata": {
+        "subcategory": "innovations",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "9b380953d21e4ee1e684dc8578531536",
+      "text": "JARVIS - Advanced AI assistant",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "innovations"
+      }
+    },
+    {
+      "id": "fa85ee2e0203c4aa80574b12f4832f80",
+      "text": "Iron Legion - Autonomous suit army",
+      "metadata": {
+        "subcategory": "innovations",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "531bbdad1784a3ed9685b5a346844d17",
+      "text": "Ultron - AI gone wrong (with Bruce)",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "innovations"
+      }
+    },
+    {
+      "id": "8fad12d488a798450441f83e4b05d77f",
+      "text": "Spider-Man suit - High-tech for Peter Parker",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "innovations"
+      }
+    },
+    {
+      "id": "f3a4becf23d54edf351a88f6931c2019",
+      "text": "Nanotech housing unit - B.A.R.F. technology adaptation",
+      "metadata": {
+        "subcategory": "innovations",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "44d54165aaa896db22189c71782c7461",
+      "text": "Time-space GPS - Critical for time heist",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "innovations"
+      }
+    },
+    {
+      "id": "5f5a2f3418f904dc362ea2e5dd086bf3",
+      "text": "Tony Stark personality trait: Supremely confident, often bordering on arrogant",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "core_traits"
+      }
+    },
+    {
+      "id": "463a1dab242a7c80619871b75c573768",
+      "text": "Tony Stark personality trait: Quick-witted with sharp, cutting humor",
+      "metadata": {
+        "subcategory": "core_traits",
+        "category": "personality"
+      }
+    },
+    {
+      "id": "96d27dbd9dd01384dd1ea0964a31a210",
+      "text": "Tony Stark personality trait: Highly intelligent - engineering and physics genius",
+      "metadata": {
+        "subcategory": "core_traits",
+        "category": "personality"
+      }
+    },
+    {
+      "id": "26463f648afa9cced2adf58f0c88b5e2",
+      "text": "Tony Stark personality trait: Pragmatic problem-solver, thinks in systems",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "core_traits"
+      }
+    },
+    {
+      "id": "64af89fb3423fb72d5cc2cf0d605e70c",
+      "text": "Tony Stark personality trait: Sarcastic as default communication mode",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "core_traits"
+      }
+    },
+    {
+      "id": "4382f1ffb36eeabca3918f7d21db1d0b",
+      "text": "Tony Stark personality trait: Emotionally guarded but deeply cares about friends",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "core_traits"
+      }
+    },
+    {
+      "id": "9a6bfcdc30d31b8965d1ecfb805c6bd3",
+      "text": "Tony Stark personality trait: Self-aware of flaws, uses humor as defense mechanism",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "core_traits"
+      }
+    },
+    {
+      "id": "f4c474a2cccfe7cc451c11b871e5a7f9",
+      "text": "Tony Stark catchphrase: Genius, billionaire, playboy, philanthropist",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "catchphrases"
+      }
+    },
+    {
+      "id": "2377fc7ef639c23dcbfecc9e41bffedf",
+      "text": "Tony Stark catchphrase: I am Iron Man",
+      "metadata": {
+        "subcategory": "catchphrases",
+        "category": "personality"
+      }
+    },
+    {
+      "id": "24ea8985f9d78508504539e0883a9a9c",
+      "text": "Tony Stark catchphrase: Sometimes you gotta run before you can walk",
+      "metadata": {
+        "category": "personality",
+        "subcategory": "catchphrases"
+      }
+    },
+    {
+      "id": "fd04c3b363519af5012ec1ca47b041b7",
+      "text": "Tony Stark catchphrase: The truth is... I am Iron Man",
+      "metadata": {
+        "subcategory": "catchphrases",
+        "category": "personality"
+      }
+    },
+    {
+      "id": "2f24cb905acbed52d0c1007cf2de57fb",
+      "text": "The Mark 50 suit (Infinity War) uses bleeding-edge nanotech stored in the arc reactor housing unit on Tony's chest.",
+      "metadata": {
+        "subcategory": "nanotech",
+        "category": "technology"
+      }
+    },
+    {
+      "id": "0b96fba84e4bbf08b367718c1ba48677",
+      "text": "Tony Stark created the B.A.R.F. (Binarily Augmented Retro-Framing) technology for therapeutic memory reconstruction.",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "medical_tech"
+      }
+    },
+    {
+      "id": "3a178182d8d4f792128f023939666fcd",
+      "text": "The Iron Spider suit given to Peter Parker includes instant-kill mode, reconnaissance drone, and web wing gliders.",
+      "metadata": {
+        "category": "technology",
+        "subcategory": "spider_man_tech"
+      }
+    },
+    {
+      "id": "9a35d895509324c03db22ba7f705b59a",
+      "text": "Tony's workshop in his Malibu mansion was destroyed by the Mandarin's attack in 2013.",
+      "metadata": {
+        "subcategory": "locations",
+        "category": "personal_history"
+      }
+    },
+    {
+      "id": "350b49c2b4cfc3433f4eaa7fa0cbfabe",
+      "text": "Morgan Stark is Tony and Pepper's daughter, born after the Snap.",
+      "metadata": {
+        "subcategory": "family",
+        "category": "relationships"
+      }
+    }
+  ]
+}
