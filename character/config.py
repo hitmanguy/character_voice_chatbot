@@ -15,14 +15,14 @@ class Config:
     gtts_maleify_semitones: int = -4    # -4 to -6 sounds more “male”; negative lowers pitch
 
     # --- Character Model ---
-    character_model_id: str = "Hitmanguy/tinyllama-ironman_v2"
+    character_model_id: str = "Hitmanguy/tinyllama-ironman_vfinal"
 
     # --- Speech-to-Text Model (Whisper) ---
     stt_model_name: str = "base"
 
     # --- Text-to-Speech Model (Coqui XTTSv2) ---
     tts_model_id: str = "tts_models/multilingual/multi-dataset/xtts_v2"
-    tts_speaker_wav: str = "weapon.wav"
+    tts_speaker_wav: str = "tony.wav"
 
     # --- Supporting Analysis Models ---
     emotion_model_name: str = "j-hartmann/emotion-english-distilroberta-base"

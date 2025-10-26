@@ -1,6 +1,5 @@
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-from peft import PeftModel
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from config import Config
 import logging
 
@@ -23,21 +22,16 @@ class CharacterResponseService:
         """
         logging.info(f"Loading character model from Hub: {self.config.character_model_id}")
         
-        bnb_config = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_quant_type="nf4",
-            bnb_4bit_compute_dtype=self.config.torch_dtype
-        )
-        
-        self.tokenizer = AutoTokenizer.from_pretrained(self.config.character_model_id)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.config.character_model_id, use_fast=False)
         self.tokenizer.pad_token = self.tokenizer.eos_token
 
         self.model = AutoModelForCausalLM.from_pretrained(
             self.config.character_model_id,
-            quantization_config=bnb_config,
-            device_map="auto"
+            torch_dtype=self.config.torch_dtype,
+            device_map="auto",
+            low_cpu_mem_usage=True
         )
-        
+
         self.model.eval()
         logging.info("✅ Character model loaded successfully from Hub.")
 

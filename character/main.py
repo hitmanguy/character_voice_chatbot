@@ -106,14 +106,14 @@ class SpeechToSpeechPipeline:
 if __name__ == '__main__':
     setup_logging()
 
-    print("\n--- Creating a Hindi test audio input file ('test_input_hindi.wav')... ---")
+    print("\n--- Creating a test audio input file ('test_input.wav')... ---")
     try:
-        kn_text = "ನಮಸ್ಕಾರ ಟೋನಿ ಸ್ಟಾರ್ಕ್, ಇಂದು ನಿಮ್ಮ ಯೋಜನೆ ಏನು?"
-        tts = gTTS(kn_text, lang='kn')
-        tts.save("test_input_hindi.mp3")
-        AudioSegment.from_mp3("test_input_hindi.mp3").export("test_input_hindi.wav", format="wav")
-        os.remove("test_input_hindi.mp3")
-        print("✅ Hindi test audio created successfully.")
+        kn_text = "tell me something about your Mark V suit"
+        tts = gTTS(kn_text, lang='en')
+        tts.save("test_input.mp3")
+        AudioSegment.from_mp3("test_input.mp3").export("test_input.wav", format="wav")
+        os.remove("test_input.mp3")
+        print("✅ test audio created successfully.")
     except Exception as e:
         logging.error(f"Failed to create test audio. Error: {e}")
         exit()
@@ -123,7 +123,7 @@ if __name__ == '__main__':
         pipeline = SpeechToSpeechPipeline(config)
         
         # <-- MODIFIED: The result is now a dictionary
-        result = pipeline.run("test_input_hindi.wav", "final_response_hindi.wav")
+        result = pipeline.run("test_input.wav", "final_response.wav")
         
         # <-- MODIFIED: Check for the audio_path in the result dictionary
         if result and result["audio_path"]:
