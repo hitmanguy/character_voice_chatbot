@@ -1,4 +1,4 @@
-<img width="1196" height="777" alt="image" src="https://github.com/user-attachments/assets/4bd490bd-15da-49a0-afef-5e3a32f5d3fe" /># Iron Man Character Voice Chatbot
+# Iron Man Character Voice Chatbot
 
 Talk to Iron Man (Tony Stark) with your voice. The app records your speech in the browser, sends it to a Python backend that:
 
